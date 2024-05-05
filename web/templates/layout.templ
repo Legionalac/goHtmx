@@ -1,0 +1,20 @@
+package views
+
+
+templ Index() {
+	<!DOCTYPE html>
+	<html data-theme="black">
+	<head>
+		<meta charset="UTF-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+		<link rel="stylesheet" href="/static/output.css"></link>
+		<title>GO + HTMX</title>
+		<script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="flex justify-center items-center h-screen">
+			@Form()
+		</div>
+	</body>
+	</html>
+}
