@@ -1,19 +1,23 @@
 package views
 
 
-templ Index() {
+templ Index(content templ.Component) {
 	<!DOCTYPE html>
 	<html data-theme="black">
 	<head>
 		<meta charset="UTF-8"></meta>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 		<link rel="stylesheet" href="/static/output.css"></link>
+		<script src="/static/script.js"></script>
 		<title>GO + HTMX</title>
 		<script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+		<meta name="htmx-config" content='{"htmx.config.withCredentials":"false"}'></meta>
+		<style>[x-cloak]{display:none}</style>
+		<!-- Include the Alpine library on your page -->
 	</head>
-	<body>
+	<body hx-boost="true">
 		<div class="flex justify-center items-center h-screen">
-			@Form()
+			@content
 		</div>
 	</body>
 	</html>
